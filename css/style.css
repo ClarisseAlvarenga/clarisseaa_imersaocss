@@ -1,0 +1,43 @@
+body{
+    background-image: url('https://www.10wallpaper.com/wallpaper/1366x768/1802/Blue_gray_gradient_abstract_vector_1366x768.jpg');
+    background-size:auto 100vh;
+    font-family: Arial;
+  }
+  
+  a{
+    text-decoration: none;
+    color: lightsteelblue;
+    font-weight: bold;
+    
+   }
+  
+  a:hover{
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .menu{
+    background-color: midnightblue;
+    padding:5vh;
+  }
+  
+  .menu  ul{
+    display: flex;
+    justify-content: space-around;   
+  }
+  
+  .menu li{
+    list-style: none;
+  }
+  
+  .site-subtitle,
+  .site-title{
+    color: midnightblue;
+    text-align: center;
+    font-weight: bolder;
+    padding:3vh;
+  }
+  
+  .site-subtitle{
+    font-style: italic;
+  }
