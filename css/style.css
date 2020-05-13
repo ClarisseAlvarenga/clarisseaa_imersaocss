@@ -1,44 +1,136 @@
+/* soft reset css*/
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
 body{
-    background-image: url('https://static.wixstatic.com/media/ef059d_fbe866d670694671bd74f74f55a89de6~mv2.jpg');
+    background-image: url('../img/mapa.jpg');
     background-size:auto 100vh;
     font-family: Arial;
-    background-color: midnightblue;
+    background-color: lightsteelblue;
+    backdrop-filter: blur(10px);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+
   }
   
-  a{
+header{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+a{
     text-decoration: none;
     color: lightsteelblue;
     font-weight: bold;
     
    }
   
-  a:hover{
+a:hover{
     color: white;
     text-decoration: underline;
   }
   
-  .menu{
+.menu{
     background-color: midnightblue;
     padding:5vh;
+    position: fixed;
+    width: 100vw;
+    top:0;
   }
   
-  .menu  ul{
+.menu  ul{
     display: flex;
     justify-content: space-around;   
   }
   
-  .menu li{
+.menu li{
     list-style: none;
   }
+.menu a{
+  display: block;
+  padding: 10px 20px;
+}
+
+.card{
+  background-color: rgba(176, 196, 222, 0.5);
+  padding: 3rem;
+  border-radius: 10px;
+  border-style: solid;
+  display:flex;
+}
   
-  .site-subtitle,
-  .site-title{
+.site-subtitle,
+.site-title{
     color: midnightblue;
     text-align: center;
     font-weight: bolder;
     padding:3vh;
   }
+
+.site-title{
+  font-family: 'Saira Stencil One', cursive;
+}
   
-  .site-subtitle{
+.site-subtitle{
     font-style: italic;
+    font-family: 'Jim Nightshade', cursive;
   }
+
+.img-portfolio, .img-head{
+    width: 250px;
+    height: 250px;
+  }
+.img-head{
+  border-radius: 50%;
+  text-align: center;
+}
+
+.site-section{
+  display: block;
+  font-family: 'Saira Stencil One', cursive;
+  padding:3vh;
+  margin: 2rem 1rem 2rem 1rem;
+
+}
+
+.portfolio{
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-direction: column;
+  background-color: midnightblue;
+  color: lightsteelblue;
+  text-align: center;
+  padding:2rem;
+  margin-bottom: 3rem;
+}
+
+.img-portfolio{
+  padding:0.2em;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: lightsteelblue;
+}
+
+.img-foto-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  
+  
+}
+
+@media(min-width: 960px) {
+  body{
+    font-size: 1.5rem;
+
+  }
+
+
+}
