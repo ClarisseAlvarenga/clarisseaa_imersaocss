@@ -31,13 +31,15 @@ a{
    }
   
 a:hover{
-    color: white;
+    color: midnightblue;
+    background-color: lightsteelblue;
     text-decoration: underline;
+    border-radius: 10px;
   }
   
 .menu{
     background-color: midnightblue;
-    padding:5vh;
+    padding:3vh;
     position: fixed;
     width: 100vw;
     top:0;
@@ -61,6 +63,7 @@ a:hover{
   padding: 3rem;
   border-radius: 10px;
   border-style: solid;
+  border-color: midnightblue;
   display:flex;
 }
   
@@ -72,29 +75,31 @@ a:hover{
     padding:3vh;
   }
 
-.site-title{
+.site-title, .menu{
   font-family: 'Saira Stencil One', cursive;
 }
   
-.site-subtitle{
+.site-subtitle, .portfolio figcaption{
     font-style: italic;
     font-family: 'Jim Nightshade', cursive;
   }
 
 .img-portfolio, .img-head{
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
   }
 .img-head{
   border-radius: 50%;
   text-align: center;
+  border-style:solid;
+  border-color: midnightblue;
 }
 
 .site-section{
   display: block;
   font-family: 'Saira Stencil One', cursive;
-  padding:3vh;
-  margin: 2rem 1rem 2rem 1rem;
+  line-height:3rem;
+  padding: 3rem;
 
 }
 
@@ -106,10 +111,21 @@ a:hover{
   background-color: midnightblue;
   color: lightsteelblue;
   text-align: center;
+  font-size: 1.5em;
   padding:2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
+.portfolio figure{
+  text-align: center;
+}
+
+.img-foto-container{
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+   
+}
 .img-portfolio{
   padding:0.2em;
   border-radius: 50%;
@@ -117,20 +133,45 @@ a:hover{
   border-color: lightsteelblue;
 }
 
-.img-foto-container{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  flex-direction: row;
-  
-  
-}
+
 
 @media(min-width: 960px) {
   body{
     font-size: 1.5rem;
 
   }
-
-
+  
 }
+
+
+  @media(min-width:480px){
+
+    .img-foto-container{
+      grid-template-columns: 45% 45%;
+       
+    }
+
+  }
+
+  @media(min-width:640px) {
+    .img-foto-container{
+      grid-template-columns: 30% 30% 30%;
+       
+    }
+
+    .img-portfolio, .img-head{
+      width: 250px;
+      height: 250px;
+
+    }
+    
+  }
+
+  @media(min-width:1200px){
+    .img-foto-container{
+      grid-template-columns: 22% 22% 22% 22%;
+       
+    }
+  }
+
+
