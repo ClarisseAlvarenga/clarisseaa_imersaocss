@@ -133,6 +133,12 @@ a:hover{
   border-color: lightsteelblue;
 }
 
+.img-portfolio:hover{
+  padding:0.2em;
+  border-radius: 30%;
+  border-style: dotted;
+}
+
 
 
 @media(min-width: 960px) {
