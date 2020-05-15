@@ -8,7 +8,7 @@ body{
     background-image: url('../img/mapa.jpg');
     background-size:auto 100vh;
     font-family: Arial;
-    background-color: lightsteelblue;
+    background-color: midnightblue;
     backdrop-filter: blur(10px);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body{
   }
   
 header{
-    height:100vh;
+    min-height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,7 @@ a{
     
    }
   
-a:hover{
+.menu a:hover, .menu a:active{
     color: midnightblue;
     background-color: lightsteelblue;
     text-decoration: underline;
@@ -43,6 +43,7 @@ a:hover{
     position: fixed;
     width: 100vw;
     top:0;
+    z-index: 1;
   }
   
 .menu  ul{
@@ -56,6 +57,62 @@ a:hover{
 .menu a{
   display: block;
   padding: 10px 20px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.sobre{
+  position: relative;
+  width: 100%;
+  min-height: 30vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+
+}
+.tauo{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: center;
+
+
+}
+
+.sobre-mim{
+  position: relative;
+  top: 9999px;
+  transform-origin: 50% 100%;
+  animation:  animacaoStarWars 60s linear forwards;
+
+}
+
+@keyframes animacaoStarWars {
+  0%{
+    top:0;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  99.9999999%{
+    /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
+    top: -6000px;
+    /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
+    transform: rotateX(25deg) translateZ(-2500px);
+
+  }
+  100%{
+    top: auto;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    letter-spacing: normal;
+    perspective: none;
+    line-height: normal;
+    box-sizing:border-box;
+  }
 }
 
 .card{
@@ -65,8 +122,30 @@ a:hover{
   border-style: solid;
   border-color: midnightblue;
   display:flex;
+  transform: scale(0.2) translateY(50vh);
+  transition: all 2s;
+  opacity: 0;
+  box-shadow: 0px 0px 30px lightsteelblue;
+
+  animation: linear 2s animacaoTitulo forwards;
 }
-  
+
+@keyframes animacaoTitulo{
+
+  0%{
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    
+  }
+
+  100%{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+
+  }
+
+}
+ 
 .site-subtitle,
 .site-title{
     color: midnightblue;
@@ -79,7 +158,7 @@ a:hover{
   font-family: 'Saira Stencil One', cursive;
 }
   
-.site-subtitle, .portfolio figcaption{
+.site-subtitle, .portfolio figcaption, .sobre-mim{
     font-style: italic;
     font-family: 'Jim Nightshade', cursive;
   }
@@ -93,13 +172,15 @@ a:hover{
   text-align: center;
   border-style:solid;
   border-color: midnightblue;
+  box-shadow: 0px 0px 10px midnightblue;
 }
 
-.site-section{
+.site-section, .contato{
   display: block;
   font-family: 'Saira Stencil One', cursive;
   line-height:3rem;
   padding: 3rem;
+  margin-bottom: 1.5rem;
 
 }
 
@@ -108,13 +189,32 @@ a:hover{
   justify-content: center;
   align-content: space-between;
   flex-direction: column;
-  background-color: midnightblue;
+  background-image: linear-gradient(0deg, transparent, black 75%);
   color: lightsteelblue;
   text-align: center;
   font-size: 1.5em;
   padding:2rem;
-  margin-bottom: 1.5rem;
 }
+
+.contato, .sobre {
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  color: lightsteelblue;
+  text-align: center;
+  font-size: 1.5em;
+
+}
+
+.contato a {
+ font-size: 4em;
+ transition: ease-in 1s;
+}
+
+.contato a:hover, .contato a:active{
+  text-decoration: none;
+  text-shadow:0px 0px 15px lightsteelblue;
+}
+
+
 
 .portfolio figure{
   text-align: center;
@@ -137,6 +237,8 @@ a:hover{
   padding:0.2em;
   border-radius: 30%;
   border-style: dotted;
+  transform: scale(1.1);
+  transition: linear(0.5s);
 }
 
 
