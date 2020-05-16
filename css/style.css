@@ -129,7 +129,7 @@ a{
   }
 
 
-.card{
+.cartao{
   background-color: rgba(176, 196, 222, 0.5);
   padding: 3rem;
   border-radius: 10px;
@@ -260,7 +260,17 @@ a{
   color: lightsteelblue;
 }
 
-/*usando a flip animation no card principal
+/*usando a flip animation no card principal*/
+
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
 .card {
   position: relative;
   transform-style: preserve-3d;
@@ -284,7 +294,12 @@ a{
   height: 180px;
   width: 100%;
   transform: rotateY(180deg);
-}*/
+  color: midnightblue;
+}
+.card-back a{
+  color: midnightblue;
+  box-shadow: 0px 0px 30px midnightblue;
+}
 
 .rodape{
   text-align: center;
