@@ -124,8 +124,10 @@ a{
     line-height: normal;
     box-sizing:border-box;
     padding: 1em;
+    display:flex;  
   }
-}
+  }
+
 
 .card{
   background-color: rgba(176, 196, 222, 0.5);
@@ -326,5 +328,60 @@ a{
        
     }
   }
+
+  @media(max-width:600px){
+    .sobre{
+      display: flex;
+      justify-content: center;
+      align-content: space-between;
+      flex-direction: column;
+      background-image: linear-gradient(0deg, transparent, black 75%);
+      color: lightsteelblue;
+      text-align: center;
+      font-size: 1.5em;
+      padding:2rem;
+      z-index: 0;
+      padding: 2em;
+      min-height: 100vh;
+      
+    
+    }
+    .tauo{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: auto;
+      font-size: 1em;
+      font-weight: none;
+      letter-spacing: none;
+      line-height: 100%;
+      perspective: none;
+      text-align: justify;
+         
+    }
+
+    .img-sobre{
+      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+      filter: grayscale();
+      transform: scaleX(-1);
+      height: 180px;
+      width:180px;
+      float:none;
+      margin:2em;
+    }
+    
+    .sobre-mim{
+      position:relative;
+      top: 0;
+      transform-origin: none;
+      animation:  none;
+      text-size-adjust: auto;
+      object-fit: fill;
+    
+    }
+    
+  }
+
+
 
 
